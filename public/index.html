@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Astrology services including horoscope readings, birth chart analysis, and personalized consultations.">
+    <title>Mithilesh Shastri - I am your path to the Stars</title>
+    <link rel="icon" href="image/webicon2.jpg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Mithilesh Shastri</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact-form">Contact</a></li> <!-- Redirect to Contact Form -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Path with Expert Astrology Guidance</h1>
+            <p>Unlock the wisdom of the stars and chart a course for success, love, and fulfillment.</p>
+            <!-- <a href="#contact" class="cta-button">Book a Consultation</a> -->
+            <button class="cta-button" onclick="window.location.href='#contact-form';">Book a Consultation</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <img src="image/astrologer_img-removebg-preview.png" alt="Astrologer Photo" class="profile-photo">
+            <div class="bio">
+                <h2>About Me</h2>
+                <p>Hello, I’m <b>Mithilesh Shastri</b>, a certified astrologer with over 10 years of experience. I
+                    specialize in helping individuals understand their astrological charts and navigate life’s
+                    challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Horoscope Readings</h3>
+                <p>Get detailed insights into your day, month, or year based on your zodiac sign.</p>
+                <!-- <a href="#contact" class="service-cta">Learn More</a> -->
+            </div>
+            <div class="service-card">
+                <h3>Birth Chart Analysis</h3>
+                <p>Explore the meaning of your natal chart and its influence on your life.</p>
+                <!-- <a href="#contact" class="service-cta">Learn More</a> -->
+            </div>
+            <div class="service-card">
+                <h3>Personalized Consultations</h3>
+                <p>One-on-one sessions for career, relationship, and life guidance.</p>
+                <!-- <a href="#contact" class="service-cta">Learn More</a> -->
+            </div>
+            <div class="service-card">
+                <h3>Career & Relationship Astrology</h3>
+                <p>Discover how your stars influence your professional and personal life.</p>
+                <!-- <a href="#contact" class="service-cta">Learn More</a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <h2>Book a Consultation Today</h2>
+        <p>Connect with me for a personalized astrology session and uncover the guidance you need.</p>
+        <!-- <a href="#contact" class="cta-button">Contact Now</a> -->
+        <button class="cta-button" onclick="window.location.href='#contact-form';">Contact Now</button>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Clients Are Saying</h2>
+        <div class="testimonial-grid" id="testimonial-carousel">
+            <div class="testimonial active">
+                <p>"The birth chart reading was incredibly accurate. It gave me so much clarity about my career path!"
+                </p>
+                <span>- Krishna Gupta </span>
+            </div>
+            <div class="testimonial">
+                <p>"I've been using these horoscope readings for a year, and they have always helped guide me."</p>
+                <span>- Ramashankar Dwivedi</span>
+            </div>
+            <div class="testimonial">
+                <p>"The personalized consultation was a game-changer. I highly recommend it!"</p>
+                <span>- Kartik Pandey</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form">
+        <h2>Contact the Astrologer</h2>
+        <form action="/contact" method="POST" id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Your Mobile number / WhatsApp number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="successMessage" style="display:none;">Your message has been sent successfully!</div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Me</h3>
+                <p>Email: astrologer@example.com</p>
+                <p>Phone: +123-456-7890</p>
+                <p>Location: City, Country</p>
+            </div>
+            <div class="social-links">
+                <h3>Follow Me</h3>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="script/astro_script.js"></script>
+    <!-- <script type="module" src="firebase.js"></script> -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDHNyRO3FIEr7dKQZcRZVG_xAIkCZZag8Q",
+            authDomain: "astrologer-mithilesh-shastry.firebaseapp.com",
+            databaseURL: "https://astrologer-mithilesh-shastry-default-rtdb.firebaseio.com",
+            projectId: "astrologer-mithilesh-shastry",
+            storageBucket: "astrologer-mithilesh-shastry.appspot.com",
+            messagingSenderId: "717209736918",
+            appId: "1:717209736918:web:dbcc7ace3c4b14d84b5b77",
+            measurementId: "G-332808Q0XR"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const database = getDatabase(app);
+
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve values from the form
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // Save data to Firebase
+            set(ref(database, 'contacts/' + Date.now()), {
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            }).then(() => {
+                document.getElementById('successMessage').style.display = 'block';
+                // Clear all input fields
+                document.getElementById('contactForm').reset();
+            }).catch((error) => {
+                console.error("Error saving data: ", error);
+            });
+
+            // Retrieve data from Firebase
+            const dbRef = ref(database);
+            get(child(dbRef, 'contacts')).then((snapshot) => {
+                if (snapshot.exists()) {
+                    snapshot.forEach((childSnapshot) => {
+                        const childData = childSnapshot.val();
+                        console.log(childData); // Log each contact's data
+                    });
+                } else {
+                    console.log("No data available");
+                }
+            }).catch((error) => {
+                console.error("Error retrieving data: ", error);
+            });
+        });
+    </script>
+</body>
+
+</html>
