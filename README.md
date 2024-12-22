@@ -1,2 +1,1 @@
-# Atro_website
-A Code of fully functional website for an Astrologer 
+A fully functional astrology website code in HTML CSS and JAVA script.
